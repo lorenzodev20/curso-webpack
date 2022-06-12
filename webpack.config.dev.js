@@ -13,6 +13,7 @@ module.exports = {
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
+  mode: 'development',
   resolve: {
     extensions: ['.js'],
     alias:{
@@ -76,12 +77,5 @@ module.exports = {
       ]
     }),
     new Dotenv(),
-  ],
-	optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin()
-    ]
-  }
+  ]
 }
